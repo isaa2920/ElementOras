@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "swSng55LPzU=",
+  "success": true,
+  "projectFilePath": "/home/silli/Projects/Coding/ElementOras/ElementOras.csproj",
+  "expectedPackageFiles": [
+    "/home/silli/.nuget/packages/raylib-cs/7.0.1/raylib-cs.7.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

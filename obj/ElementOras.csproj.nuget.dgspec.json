@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/silli/Projects/Coding/ElementOras/ElementOras.csproj": {}
+  },
+  "projects": {
+    "/home/silli/Projects/Coding/ElementOras/ElementOras.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/silli/Projects/Coding/ElementOras/ElementOras.csproj",
+        "projectName": "ElementOras",
+        "projectPath": "/home/silli/Projects/Coding/ElementOras/ElementOras.csproj",
+        "packagesPath": "/home/silli/.nuget/packages/",
+        "outputPath": "/home/silli/Projects/Coding/ElementOras/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/silli/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Raylib-cs": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
