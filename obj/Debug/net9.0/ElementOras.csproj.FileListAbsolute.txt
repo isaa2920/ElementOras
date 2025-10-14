@@ -20,3 +20,4 @@
 /home/silli/Projects/Coding/ElementOras/obj/Debug/net9.0/ElementOras.pdb
 /home/silli/Projects/Coding/ElementOras/obj/Debug/net9.0/ElementOras.genruntimeconfig.cache
 /home/silli/Projects/Coding/ElementOras/obj/Debug/net9.0/ref/ElementOras.dll
+/home/silli/Projects/Coding/ElementOras/obj/Debug/net9.0/ElementOras.sourcelink.json

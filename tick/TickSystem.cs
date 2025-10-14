@@ -9,7 +9,7 @@ public static class TickSystem
         while (true)
         {
             Thread.Sleep(100);
-            Console.WriteLine("tick");
+            //Console.WriteLine("tick");
 
             if(doTickLoop == false)
             {

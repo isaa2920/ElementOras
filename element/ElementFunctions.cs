@@ -6,6 +6,9 @@ public static class ElementFunctions
     {
         switch (element.element)
         {
+            case ElementWorld.Elements.Air:
+                break;
+
             case ElementWorld.Elements.Test:
                 TestElementTick();
                 break;
