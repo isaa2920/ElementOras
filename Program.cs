@@ -13,14 +13,18 @@ internal static class Program
     {
         Raylib.InitWindow(WindowSizeX, WindowSizeY, ApplicationName);
 
+        Thread thread1 = new Thread(tick.TickSystem.TickLoop);
+        thread1.Start();
+
         while (!Raylib.WindowShouldClose())
         {
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
-            
+
             Raylib.EndDrawing();
         }
 
+        tick.TickSystem.doTickLoop = false;
         Raylib.CloseWindow();
     }
 }
