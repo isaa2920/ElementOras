@@ -27,13 +27,11 @@ internal static class Program
 
             foreach (element.Element currentElement in ElementWorld.elementGrid)
             {
-                //Console.WriteLine(currentElement.element);
-                //Console.WriteLine(currentElement.arrayIndex);
+                Raylib.ClearBackground(Color.White);
 
                 ElementWorld.ScreenCoordinates coords = ElementWorld.ElementIndexToPosition(currentElement.arrayIndex);
                 Color currentColor = ElementVisuals.GetElementColour(currentElement.element);
-                Raylib.DrawRectangle(0, 0, coords.X * 4, coords.Y * 4, currentColor);
-                
+                Raylib.DrawRectangle(coords.X * 4, coords.Y * 4, 4, 4, currentColor);
             }
 
             Raylib.EndDrawing();
