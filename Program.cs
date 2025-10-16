@@ -27,7 +27,7 @@ internal static class Program
 
             foreach (element.Element currentElement in ElementWorld.elementGrid)
             {
-                Raylib.ClearBackground(Color.White);
+                //Raylib.ClearBackground(Color.White);
 
                 ElementWorld.ScreenCoordinates coords = ElementWorld.ElementIndexToPosition(currentElement.arrayIndex);
                 Color currentColor = ElementVisuals.GetElementColour(currentElement.element);
