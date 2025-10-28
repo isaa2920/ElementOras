@@ -1,4 +1,4 @@
-namespace ElementOras.element;
+namespace ElementOras;
 
 public static class ElementTesting
 {

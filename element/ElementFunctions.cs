@@ -1,4 +1,4 @@
-namespace ElementOras.element;
+namespace ElementOras;
 
 public static class ElementFunctions
 {
@@ -10,22 +10,22 @@ public static class ElementFunctions
                 break;
 
             case ElementWorld.Elements.Test:
-                TestElementTick();
+                TestElementTick(element);
                 break;
 
             case ElementWorld.Elements.CoolerTest:
-                TestElementTick();
+                CoolerTestElementTick(element);
                 break;
         }
     }
 
-    private static void TestElementTick()
+    private static void TestElementTick(Element element)
     {
-        Console.WriteLine("TestElement");
+        TransformElement.MoveElementVertical(element, 1);
     }
     
-    private static void CoolerTestElementTick()
+    private static void CoolerTestElementTick(Element element)
     {
-        Console.WriteLine("CoolerTestElement");
+        TransformElement.MoveElementVertical(element, -1);
     }
 }

@@ -1,6 +1,6 @@
 using Raylib_cs;
 
-namespace ElementOras.element;
+namespace ElementOras;
 
 public static class ElementVisuals
 {
@@ -11,13 +11,13 @@ public static class ElementVisuals
         switch (elementType)
         {
             case ElementWorld.Elements.Air:
-                color = Color.Gray;
+                color = Color.White;
                 break;
             case ElementWorld.Elements.Test:
-                color = Color.Black;
+                color = Color.Magenta;
                 break;
             case ElementWorld.Elements.CoolerTest:
-                color = Color.Orange;
+                color = Color.Red;
                 break;
         }
         

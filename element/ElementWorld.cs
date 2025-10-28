@@ -1,4 +1,4 @@
-namespace ElementOras.element;
+namespace ElementOras;
 
 public static class ElementWorld
 {
@@ -33,8 +33,8 @@ public static class ElementWorld
         return coords;
     }
 
-    public const int GridSizeX = Program.WindowSizeX / 4; // 200
-    public const int GridSizeY = Program.WindowSizeY / 4; // 120
+    public const int GridSizeX = 200;
+    public const int GridSizeY = 120;
 
     public const int GridTotal = GridSizeX * GridSizeY;
 
@@ -44,7 +44,7 @@ public static class ElementWorld
     {
         for (int i = 0; i < GridTotal; i++)
         {
-            element.Element currentElement = new();
+            Element currentElement = new();
             currentElement.element = Elements.Air;
             currentElement.arrayIndex = i;
 

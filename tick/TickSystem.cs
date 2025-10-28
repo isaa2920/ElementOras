@@ -1,4 +1,4 @@
-namespace ElementOras.tick;
+namespace ElementOras;
 
 public static class TickSystem
 {
@@ -8,7 +8,12 @@ public static class TickSystem
     {
         while (true)
         {
-            Thread.Sleep(100);
+            Thread.Sleep(20);
+            foreach (Element element in ElementWorld.elementGrid)
+            {
+                ElementFunctions.TickElement(element);
+            }
+
             //Console.WriteLine("tick");
 
             if(doTickLoop == false)
