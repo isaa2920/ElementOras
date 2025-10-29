@@ -7,8 +7,8 @@ public static class UI
     //got lazy here so doing this manually
     static Button[] buttons = [
         new(ElementWorld.Elements.Air,0,0,Raylib.LoadTexture("textures/elements/air.png")),
-        new(ElementWorld.Elements.Air,32,0,Raylib.LoadTexture("textures/elements/test.png")),
-        new(ElementWorld.Elements.Air,64,0,Raylib.LoadTexture("textures/elements/coolertest.png"))
+        new(ElementWorld.Elements.Test,32,0,Raylib.LoadTexture("textures/elements/test.png")),
+        new(ElementWorld.Elements.CoolerTest,64,0,Raylib.LoadTexture("textures/elements/coolertest.png"))
     ];
     
     public static void DrawUI()
@@ -20,7 +20,7 @@ public static class UI
             bool pressed = button.CheckPressed(Raylib.GetMousePosition(), Raylib.IsMouseButtonPressed(MouseButton.Left));
             if (pressed == true)
             {
-                Console.WriteLine("pressed!!!!");
+                Dispense.storedElement = button.element;
             }
         }
     }

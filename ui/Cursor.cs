@@ -13,11 +13,12 @@ public static class Cursor
         Vector2 pos = Raylib.GetMousePosition();
         if (Raylib.IsMouseButtonDown(MouseButton.Left))
         {
-            Raylib.DrawTexture(clickCursor, (int)pos.X + 3, (int)pos.Y + 3, Color.Gray);
+            Raylib.DrawTexture(clickCursor, (int)pos.X-3, (int)pos.Y-8, Color.Gray);
+            Dispense.DispenseStoredElement();
         }
         else
         {
-            Raylib.DrawTexture(cursor, (int)pos.X + 3, (int)pos.Y + 3, Color.Gray);
+            Raylib.DrawTexture(cursor, (int)pos.X - 2, (int)pos.Y-1, Color.Gray);
         }
     }
 }

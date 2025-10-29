@@ -12,7 +12,7 @@ internal static class Program
     public static void Main()
     {
         ElementWorld.InitializeGrid();
-        ElementTesting.AddRandomElements();
+        //ElementTesting.AddRandomElements();
 
         Raylib.InitWindow(WindowSizeX, WindowSizeY, ApplicationName);
 

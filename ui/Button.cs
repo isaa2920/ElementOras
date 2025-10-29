@@ -5,7 +5,7 @@ namespace ElementOras;
 
 public class Button
 {
-    ElementWorld.Elements element;
+    public ElementWorld.Elements element;
     
     public int posX;
     public int posY;
