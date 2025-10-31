@@ -6,6 +6,7 @@ namespace ElementOras;
 public static class Dispense
 {
     public static ElementWorld.Elements storedElement = ElementWorld.Elements.Air;
+    public static bool storedFlammability = false;
 
     public static void DispenseStoredElement()
     {
@@ -32,6 +33,7 @@ public static class Dispense
             Element element = new();
             element.arrayIndex = index;
             element.element = storedElement;
+            element.flammable = storedFlammability;
 
             ElementWorld.elementGrid[index] = element;
         }

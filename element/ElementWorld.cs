@@ -5,6 +5,17 @@ public static class ElementWorld
     public enum Elements
     {
         Air,
+        Water,
+        Fire,
+        Smoke,
+        Plant,
+        Flower,
+        Acid,
+        Sand,
+        Wall,
+        Metal,
+        Plastic,
+        Infection,
         Test,
         CoolerTest
     }

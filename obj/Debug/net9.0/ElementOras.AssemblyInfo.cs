@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElementOras")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b6c7c11f14a10d50ede990c378528ea82b8fe91")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ca28c9f305d3d413827f5167ebe2412dd727287")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElementOras")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElementOras")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 namespace ElementOras;
 
-public static class TransformElement
+public static class ForceTransformElement
 {
-    public static void MoveElementUp(Element element)
+    public static void ForceMoveElementUp(Element element)
     {
         if (element.arrayIndex > ElementWorld.GridSizeX)
         {
@@ -12,15 +12,13 @@ public static class TransformElement
                 return;
             }
             ElementWorld.Elements storedSwapElement = ElementWorld.elementGrid[target].element;
-            if (storedSwapElement == ElementWorld.Elements.Air)
-            {
                 ElementWorld.elementGrid[target].element = element.element;
                 ElementWorld.elementGrid[element.arrayIndex].element = storedSwapElement;
-            }
+            
         }
     }
 
-    public static void MoveElementDown(Element element)
+    public static void ForceMoveElementDown(Element element)
     {
         if (element.arrayIndex < ElementWorld.GridSizeY * ElementWorld.GridSizeX - ElementWorld.GridSizeX)
         {
@@ -33,11 +31,10 @@ public static class TransformElement
             ElementWorld.Elements storedSwapElement = ElementWorld.elementGrid[target].element;
             ElementWorld.Elements storedSelfElement = ElementWorld.elementGrid[element.arrayIndex].element;
 
-            if (storedSwapElement == ElementWorld.Elements.Air)
-            {
+            
                 ElementWorld.elementGrid[element.arrayIndex].element = storedSwapElement;
                 ElementWorld.elementGrid[target].element = storedSelfElement;
-            }
+            
 
             if (!(storedSwapElement == storedSelfElement))
             {
@@ -46,7 +43,7 @@ public static class TransformElement
         }
     }
 
-    public static void MoveElementLeft(Element element)
+    public static void ForceMoveElementLeft(Element element)
     {
         if (element.arrayIndex > ElementWorld.GridSizeX)
         {
@@ -56,23 +53,22 @@ public static class TransformElement
                 return;
             }
             ElementWorld.Elements storedSwapElement = ElementWorld.elementGrid[target].element;
-            if (storedSwapElement == ElementWorld.Elements.Air)
+            
+            int indexX = element.arrayIndex;
+            while (indexX > ElementWorld.GridSizeX)
             {
-                int indexX = element.arrayIndex;
-                while (indexX > ElementWorld.GridSizeX)
-                {
-                    indexX -= ElementWorld.GridSizeX;
-                }
-                if (indexX > 1)
-                {
-                    ElementWorld.elementGrid[target].element = element.element;
-                    ElementWorld.elementGrid[element.arrayIndex].element = storedSwapElement;
-                }
+                indexX -= ElementWorld.GridSizeX;
             }
+            if (indexX > 1)
+            {
+                ElementWorld.elementGrid[target].element = element.element;
+                ElementWorld.elementGrid[element.arrayIndex].element = storedSwapElement;
+            }
+        
         }
     }
     
-    public static void MoveElementRight(Element element)
+    public static void ForceMoveElementRight(Element element)
     {
         if (element.arrayIndex > ElementWorld.GridSizeX)
         {
@@ -83,24 +79,22 @@ public static class TransformElement
             }
             ElementWorld.Elements storedSwapElement = ElementWorld.elementGrid[target].element;
             ElementWorld.Elements storedSelfElement = ElementWorld.elementGrid[element.arrayIndex].element;
-            if (storedSwapElement == ElementWorld.Elements.Air)
+            
+            int indexX = element.arrayIndex;
+            while (indexX > ElementWorld.GridSizeX)
             {
-                int indexX = element.arrayIndex;
-                while (indexX > ElementWorld.GridSizeX)
-                {
-                    indexX -= ElementWorld.GridSizeX;
-                }
-                if (indexX < ElementWorld.GridSizeX)
-                {
-                    ElementWorld.elementGrid[target].element = element.element;
-                    ElementWorld.elementGrid[element.arrayIndex].element = storedSwapElement;
-                }
-
-                if (!(storedSwapElement == storedSelfElement))
-                {
-                    ElementWorld.elementGrid[target].incapacitated = true;
-                }
+                indexX -= ElementWorld.GridSizeX;
             }
+            if (indexX < ElementWorld.GridSizeX)
+            {
+                ElementWorld.elementGrid[target].element = element.element;
+                ElementWorld.elementGrid[element.arrayIndex].element = storedSwapElement;
+            }
+            if (!(storedSwapElement == storedSelfElement))
+            {
+                ElementWorld.elementGrid[target].incapacitated = true;
+            }
+            
         }
     }
 }

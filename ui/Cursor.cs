@@ -10,15 +10,16 @@ public static class Cursor
 
     public static void DrawCursor()
     {
+        Color color = ElementVisuals.GetElementColour(Dispense.storedElement);
         Vector2 pos = Raylib.GetMousePosition();
         if (Raylib.IsMouseButtonDown(MouseButton.Left))
         {
-            Raylib.DrawTexture(clickCursor, (int)pos.X-3, (int)pos.Y-8, Color.Gray);
+            Raylib.DrawTexture(clickCursor, (int)pos.X-3, (int)pos.Y-8, color);
             Dispense.DispenseStoredElement();
         }
         else
         {
-            Raylib.DrawTexture(cursor, (int)pos.X - 2, (int)pos.Y-1, Color.Gray);
+            Raylib.DrawTexture(cursor, (int)pos.X - 2, (int)pos.Y-1, color);
         }
     }
 }

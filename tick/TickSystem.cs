@@ -13,6 +13,10 @@ public static class TickSystem
             {
                 ElementFunctions.TickElement(element);
             }
+            foreach (Element element in ElementWorld.elementGrid)
+            {
+                element.incapacitated = false;
+            }
 
             //Console.WriteLine("tick");
 

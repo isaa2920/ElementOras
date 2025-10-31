@@ -32,7 +32,7 @@ internal static class Program
             {
                 ElementWorld.ScreenCoordinates coords = ElementWorld.ElementIndexToPosition(currentElement.arrayIndex);
                 Color currentColor = ElementVisuals.GetElementColour(currentElement.element);
-                Raylib.DrawRectangle(coords.X * 4, coords.Y * 4 + 128, 4, 4, currentColor);
+                Raylib.DrawRectangle(coords.X * 4 - 4, coords.Y * 4 + 128, 4, 4, currentColor);
             }
             UI.DrawUI();
             Cursor.DrawCursor();

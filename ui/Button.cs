@@ -6,6 +6,7 @@ namespace ElementOras;
 public class Button
 {
     public ElementWorld.Elements element;
+    public bool flammable;
     
     public int posX;
     public int posY;
@@ -17,9 +18,10 @@ public class Button
         Raylib.DrawTexture(tex, posX, posY, Color.White);
     }
 
-    public Button(ElementWorld.Elements elem, int x, int y, Texture2D texture)
+    public Button(ElementWorld.Elements elem, bool flame, int x, int y, Texture2D texture)
     {
         element = elem;
+        flammable = flame;
         
         posX = x;
         posY = y;
